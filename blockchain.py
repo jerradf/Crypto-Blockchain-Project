@@ -133,6 +133,7 @@ class Blockchain:
 
         last_nonce = last_block.nonce
         nonce = Blockchain.proof_of_work(last_nonce)
+        print(nonce)
         if nonce != 0:
             # Mine the block after successfully verifying the transaction is valid.
             print("{Note from miner}....Success!")
