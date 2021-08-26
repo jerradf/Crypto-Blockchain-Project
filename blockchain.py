@@ -133,7 +133,7 @@ class Blockchain:
 
         last_nonce = last_block.nonce
         nonce = Blockchain.proof_of_work(last_nonce)
-        print(nonce)
+        block = None
         if nonce != 0:
             # Mine the block after successfully verifying the transaction is valid.
             print("{Note from miner}....Success!")
@@ -141,7 +141,7 @@ class Blockchain:
             block = self.construct_block(nonce, last_hash)
         else:
             print("{Note from miner}....Failure to mine!")
-        return vars(block)
+        return block
 
 
     def create_node(self, address):
