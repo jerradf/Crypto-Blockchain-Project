@@ -148,14 +148,3 @@ class Blockchain:
         # In the event that we have a new node that wants to connect to our blockchain network,
         # we can add them to our list of nodes here.
         self.nodes.add(address)
-
-
-    def obtain_block_object(block_data):
-        # Returns the block object given the data that we need to retrieve it.
-
-        return block.Block(
-            block_data['name'],
-            block_data['index'],
-            block_data['nonce'],
-            block_data['prev_hash'],
-            block_data['transactions'])

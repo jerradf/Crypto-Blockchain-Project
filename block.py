@@ -45,7 +45,7 @@ class Block:
         # (since we are using different data types for our properties of the Block, this is crucial)
         # Returns a 256-bit string representing the contents of the block.
 
-        block_string = "{}{}{}{}{}".format(self.index, self.nonce,
+        block_string = "{}{}{}{}{}{}".format(self.name, self.index, self.nonce,
                                               self.prev_hash, self.data,
                                               self.timestamp)
 
