@@ -15,7 +15,6 @@ class Block:
         self.nonce = 0
         self.prev_hash = prev_hash
         self.transaction = transaction
-        self.name = name
         self.timestamp = (datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
 
     
@@ -24,8 +23,10 @@ class Block:
                                               self.name, self.index, self.nonce,
                                               self.prev_hash, self.transaction,
                                               self.timestamp)
-
-        return hashlib.sha256(block_string.encode()).hexdigest()
+        encoded_string = block_string.encode()
+        hashed_encoded_string = hashlib.sha256(encoded_string)
+        hexadecimal_hash = hashed_encoded_string.hexdigest()
+        return hexadecimal_hash
 
 
     def __repr__(self):

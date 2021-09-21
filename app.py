@@ -126,13 +126,7 @@ class UI():
       self.balances[coin] += quantity
 
 
-  def intro(self):
-    '''
-    Welcomes user to app, and allows them to enter their name.
-    '''
-    print("Welcome to CM_TRADING!")
-    self.name = input("Please enter your name: ")
-    print("Welcome,", self.name, '\n\n')
+  def initialize_trading_coins(self):
     # Mine for 0 coin for all the coins that are going to be in the CM_TRADING system (that way we have them displayed in the app)
 
     # Why are the bought and sold values being initialized to 1?
@@ -146,6 +140,16 @@ class UI():
     self.balances["Simple Coin"] = 0
     self.cm_blockchain.bought["Simple Coin"] = 1
     self.cm_blockchain.sold["Simple Coin"] = 1
+
+
+  def intro(self):
+    '''
+    Welcomes user to app, and allows them to enter their name.
+    '''
+    print("Welcome to CM_TRADING!")
+    self.name = input("Please enter your name: ")
+    print("Welcome,", self.name, '\n\n')
+    self.initialize_trading_coins()
 
 
   def choose_options(self):
