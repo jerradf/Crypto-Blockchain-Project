@@ -1,0 +1,12 @@
+Testing:
+
+1. Quit
+2. Trade a coin, Buy a Coin, Check the Balance (USD and coin)
+3. Trade a coin, Buy a Coin, Sell a Coin, Check the Balance
+4. Mine a coin, Check the Balance (coin)
+5. Mine a coin, Sell a Coin, Check the Balance (coin)
+6. Mine a coin, Sell a Coin, Buy a coin, Check the Balance (coin)
+7. Buy a Coin, Add Money, Check Balance (USD and coin)
+8. Buy a Coin, Add Money, Buy a coin, Check Balance (USD and Coin)
+9. Buy a Coin, Add Money, Buy a coin, Sell a coin, Check Balance (USD and Coin)
+10. Buy a Coin, Add Money, Buy a coin, Sell a coin, Check Balance (USD and Coin), Quit

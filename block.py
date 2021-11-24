@@ -7,12 +7,13 @@ import hashlib
 import time
 import datetime
 
+
 class Block:
 
     def __init__(self, name, index, nonce, prev_hash, transaction):
         self.name = name
         self.index = index
-        self.nonce = 0
+        self.nonce = nonce
         self.prev_hash = prev_hash
         self.transaction = transaction
         self.timestamp = (datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
@@ -30,6 +31,6 @@ class Block:
 
 
     def __repr__(self):
-        return "{} - {} - {} - {} - {} - {}".format(self.name, self.index, self.nonce,
-                                               self.prev_hash, self.transaction,
-                                               self.timestamp)
+        return "{} - {} - {} - {} - {} - {}".format(self.name, self.index,                                                                       self.nonce,
+                                                    self.prev_hash, self.transaction,
+                                                    self.timestamp)
